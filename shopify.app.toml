@@ -3,11 +3,12 @@
 client_id = "e1a9670d81261795674de0ea08fd9018"
 name = "thank-you-and-order-status"
 handle = "thank-you-and-order-status"
-application_url = "https://example.com/"
+application_url = "https://tip-spyware-savings-remaining.trycloudflare.com"
 embedded = true
 
 [build]
 include_config_on_deploy = true
+automatically_update_urls_on_dev = true
 
 [webhooks]
 api_version = "2025-04"
@@ -25,7 +26,11 @@ api_version = "2025-04"
 scopes = "write_products"
 
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = [
+  "https://tip-spyware-savings-remaining.trycloudflare.com/auth/callback",
+  "https://tip-spyware-savings-remaining.trycloudflare.com/auth/shopify/callback",
+  "https://tip-spyware-savings-remaining.trycloudflare.com/api/auth/callback"
+]
 
 [pos]
 embedded = false
